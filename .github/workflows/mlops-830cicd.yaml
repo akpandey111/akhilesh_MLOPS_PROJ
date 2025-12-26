@@ -32,7 +32,7 @@ jobs:
     # 4️⃣ Build UI image
     - name: Build UI Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/mlops-model:latest-api -f docker/Dockerfile.ui .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/mlops-model:latest-ui -f docker/Dockerfile.ui .
 
     # 5️⃣ Push API image
     - name: Push API image
