@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kashi-api-deploy
+  name: akhilesh-api-deploy
 spec:
   replicas: 1
   selector:
@@ -17,13 +17,14 @@ spec:
         image: kashinaresh/mlops-model-api:latest
         ports:
         - containerPort: 8000
+---
 apiVersion: v1
 kind: Service
 metadata:
-   name: kashi-api-svc
-  spec:
-    selector:
+  name: akhilesh-api-svc
+spec:
+  selector:
     app: api
-    ports:
+  ports:
   - port: 8000
     targetPort: 8000
